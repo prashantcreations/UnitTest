@@ -4,9 +4,15 @@ import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class UnitTestApplication {
+	
+	@Bean
+	Student student() {
+		return new Student();
+	}
 	
 	String checkRef = "Prashant";
 	
@@ -55,6 +61,12 @@ public class UnitTestApplication {
 		}
 		
 		return false ;
+	}
+	
+	
+	public String[] equalArray() {
+		String[] arr= {"A","B","C"};
+		return arr;
 	}
 	
 }

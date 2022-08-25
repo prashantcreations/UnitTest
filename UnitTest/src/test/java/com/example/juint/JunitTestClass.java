@@ -1,4 +1,4 @@
-package com.example.testCase;
+package com.example.juint;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -77,7 +77,7 @@ public class JunitTestClass {
 		String s1= null;
 		String s2 = "Prashant";
 		
-		UnitTestApplication test = new UnitTestApplication();
+		 test = new UnitTestApplication();
 		assertNull(test.checkForNull(s1), "object should be null");
 		assertNotNull(test.checkForNull(s2),"object should not be null");
 	}
@@ -95,6 +95,22 @@ public class JunitTestClass {
 	void checkForValue() {
 		assertTrue(test.checkForValue(10, 10),"both are euqlas");
 		assertFalse(test.checkForValue(10, 11),"both are not euqlas");
+	}
+
+	
+	@Test
+	@DisplayName("check array is equal or not")
+	void checkForArray() {
+		
+		String[] s1 = {"A","B","C"};
+		String[] s2 = {"R","F","B"};
+		
+		//assertArrayEquals
+		//assertArryaNotEquals
+		
+		
+		
+		
 	}
 	
 }
